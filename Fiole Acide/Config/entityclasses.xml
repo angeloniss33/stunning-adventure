@@ -1,0 +1,11 @@
+<Jessy>
+
+
+	<!-- Bone -->	
+
+	<set xpath="/entity_classes/entity_class[@name='animalSnake']/drop[@event='Harvest' and @name='foodRawMeat']/@name">resourceVeninSerpent</set>
+	<set xpath="/entity_classes/entity_class[@name='animalSnake']/drop[@event='Harvest' and @name='resourceVeninSerpent']/@count">1</set>
+	
+	
+
+</Jessy>

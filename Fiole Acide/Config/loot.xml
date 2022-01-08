@@ -1,0 +1,13 @@
+<Jessy>
+
+
+	<append xpath="/lootcontainers/lootgroup[@name='groupCraftingCommon']">
+	       <item name="resourceFioleAcide" count ="1,2" loot_prob_template="low"/>	
+	</append>
+	
+	<append xpath="/lootcontainers/lootgroup[@name='groupCraftingUncommon']">
+	       <item name="resourceFioleAcide" count ="1,2" loot_prob_template="low"/>	
+	</append>
+
+
+</Jessy>

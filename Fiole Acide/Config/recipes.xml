@@ -1,0 +1,20 @@
+<Jessy>
+
+	<append xpath="/recipes">
+	
+		<recipe name="resourceFioleAcide" count="2" craft_area="campfire">
+	             <ingredient name="carBattery" count="1"/>
+			 <ingredient name="resourceVeninSerpent" count="1"/>
+	             <ingredient name="resourcePotassiumNitratePowder" count="200"/></recipe>
+
+            <recipe name="resourceAcid" count="2" craft_area="campfire" tags="learnable">
+	             <ingredient name="resourceFioleAcide" count="5"/>
+	             <ingredient name="resourceScrapPolymers" count="50"/>
+	             <effect_group>
+		            <passive_effect name="CraftingIngredientCount" level="1,2,3" operation="perc_add" value="-.3,-.5,-.5" tags="resourceScrapPolymers"/>
+	             </effect_group>
+             </recipe>
+				
+	</append>
+	
+</Jessy>

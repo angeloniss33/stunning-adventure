@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Jessy>
+
+	 <remove xpath="/items/item[@name='resourceAcid']"/>
+	
+	<append xpath="/items">
+	
+	       <item name="resourceFioleAcide">
+                   <property name="CustomIcon" value="resourceFioleAcide"/>	
+	             <property name="DescriptionKey" value="resourceFioleAcideDesc"/>
+	             <property name="CreativeMode" value="Player"/>
+	             <property name="HoldType" value="45"/>
+	             <property name="Tags" value="junk"/>
+	             <property name="Meshfile" value="#Other/Items?Misc/sackPrefab.prefab"/>
+	             <property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+	             <property name="Material" value="MresourceAcid"/>
+	             <property name="Weight" value="10"/>
+	             <property name="UnlockedBy" value="resourceAcidSchematic"/>
+	             <property name="Stacknumber" value="1000"/> <!-- STK ammo -->
+	             <property name="Group" value="Resources,Chemicals,CFChemicals"/>
+	             <property name="EconomicValue" value="120"/>
+	             <property name="EconomicBundleSize" value="1"/>
+             </item>
+             <item name="resourceFioleAcideSchematic">
+	             <property name="Extends" value="schematicMaster"/>
+	             <property name="CreativeMode" value="Player"/>
+	             <property name="CustomIcon" value="resourceFioleAcide"/>
+	             <property name="Unlocks" value="resourceFioleAcide"/>
+	             <effect_group tiered="false">
+		             <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="resourceFioleAcide" operation="set" value="1"/>
+		             <triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+	             </effect_group>
+             </item>
+
+             <item name="resourceAcid">
+	             <property name="HoldType" value="45"/>
+	             <property name="Meshfile" value="#Other/Items?Misc/sackPrefab.prefab"/>
+	             <property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+	             <property name="Material" value="MresourceAcid"/>
+	             <property name="Weight" value="0"/>
+	             <property name="UnlockedBy" value="resourceAcidSchematic"/>
+	             <property name="Stacknumber" value="100"/> <!-- STK resource -->
+	             <property name="EconomicValue" value="140"/>
+	             <property name="EconomicBundleSize" value="1"/>
+	             <property name="Group" value="Resources,Chemicals,CFChemicals"/>
+             </item>
+             <item name="resourceAcidSchematic">
+	             <property name="Extends" value="schematicMaster"/>
+	             <property name="CreativeMode" value="Player"/>
+	             <property name="CustomIcon" value="resourceAcid"/>
+	             <property name="Unlocks" value="resourceAcid"/>
+	             <effect_group tiered="false">
+		             <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="resourceAcid" operation="set" value="1"/>
+		             <triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+	             </effect_group>
+             </item>
+
+		 <item name="resourceVeninSerpent">
+                   <property name="Tags" value="medical"/>
+	             <property name="DisplayType" value="drugSteroids"/>
+			 <property name="DescriptionKey" value="resourceVeninSerpentDesc"/>
+	             <property name="HoldType" value="16"/>
+	             <property name="Meshfile" value="#Other/Items?Health/painkillersPrefab.prefab"/>
+	             <property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+	             <property name="Material" value="MresourceTestosteroneExtract"/>
+	             <property name="EconomicValue" value="80"/>
+	             <property name="Stacknumber" value="10"/> <!-- STK loot -->
+	             <property name="Group" value="Science,CFChemicals,Medical"/>
+	             <property class="Action0">
+		             <property name="Class" value="Eat"/>
+		             <property name="Delay" value="1.0"/>
+		             <property name="Use_time" value="..."/>
+		             <property name="Sound_start" value="player_painkillers"/>
+	             </property>
+	             <effect_group tiered="false" name="Drug Tier 3">
+		             <display_value name="dCarryCapacity" value="50"/>
+		             <display_value name="dRunSpeed" value=".1"/>
+		             <display_value name="$waterAmountAdd" value="-30"/>
+		             <display_value name="dDuration" value="600"/>
+		             <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffDrugSteroidsDuration" operation="add" value="603"/>
+		             <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffDrugSteroidsDuration" operation="set" value="903">
+			       <requirement name="CVarCompare" cvar="$buffDrugSteroidsDuration" operation="GT" value="903"/></triggered_effect>
+		             <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffDrugSteroids"/>
+	             </effect_group>
+             </item>
+		
+	</append>
+</Jessy>

@@ -1,0 +1,21 @@
+﻿Key,Source,Context,French
+
+
+resourceAcidSchematic,items,Resources,"Schemat de l'acide"
+
+resourceFioleAcide,items,Resources,"Fiole d'acide"
+resourceFioleAcideDesc,items,Resources,"Petites fioles d'acide servant pour la fabrication des bidons d'acide."
+resourceFioleAcideSchematic,items,Resources,"Schemat fiole d'acide"
+
+resourceVeninSerpent,items,Resources,"Extrait de venin"
+resourceVeninSerpentDesc,items,Resources,"Un composé utilisé pour crée des stéroïdes qui sont extrait à partir de glandes de serpents, utilisé égallement pour fabriqué des petites fioles d'acide."
+
+
+
+
+
+
+
+
+
+
